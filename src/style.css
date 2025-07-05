@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+
+
+/* //Register */
+
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    }
+    form {
+         width: 40%;
+         padding: 20px;
+         box-shadow: 0px 2px 15px rgba(0 0 0 / 10%);
+         background-color: #fff;
+    }
+    input{
+        width: 100%;
+        padding: 10px 20px;
+        outline: none;
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        margin-bottom: 20px;
+    }
+    input:focus {
+        border: 2px solid #86b7fe;
+    }
+    input::placeholder{
+        color: rgba(0, 0, 0, 0.3);
+    }
+    .register{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .register button, .register-nav {
+        outline: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #86b7fe;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 2px solid #86b7fe;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .register button:hover, .register-nav:hover {
+        background-color: white;
+        color: #86b7fe;
+        border: 2px solid #86b7fe;
+    }
+    .error{
+        color: red;
+        font-size: 13px;
+        margin-top: -10px;
+    }
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
