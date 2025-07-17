@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style.css';
-import './dashboard.css'
+import './Pages/style.css';
+import './components/Dashboard/dashboard.css';
 import App from './App';
+import UserProvider from './Pages/Context/Usercontext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    
+    <UserProvider>
+        <App />
+    </UserProvider>
   </React.StrictMode>
 );
 

@@ -20,11 +20,29 @@
 }
 
 .item-link {
-  font-size: 20px;
+  font-size: 22px;
   color: #232121;
   text-decoration: none;
+  display: block;
+  padding: 20px;
+  transition: 0.1s;
+}
+.item-link:hover {
+  background-color: #e0e0e0;
+  color: #000;
+  border-radius: 10px;
 }
 
+.active {
+  background-color: #e0e0e0;
+  color: #000;
+  border-radius: 10px;
+}
+
+.fa {
+  color: #232121;
+  margin-right: 10px;
+}
 
 
 
@@ -49,7 +67,7 @@ th {
   color: #232121;
 }
 
-td{
+td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
