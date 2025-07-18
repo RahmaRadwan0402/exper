@@ -1,8 +1,19 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
+import Cookies from "universal-cookie";
 
 export default function Header() {
 
+  const cookie = new Cookies();
+  const token = cookie.get("authData?.token")
 
+async function handleLogOut(){
+ await axios.post(`http://127.0.0.1:8000/api/logout`,null,{headers:{
+    Authorization: "Bearer " + token,
+  }})
+  cookie.remove("authData")
+  
+}
 
   return (
     <div className="container" 
@@ -24,7 +35,7 @@ export default function Header() {
             Dashboard
         </Link>
         </div>
-
+        {!token ? (
           <div 
           style={{ 
             marginTop: "10px", 
@@ -37,10 +48,11 @@ export default function Header() {
             <Link className="register-nav" to="/login">
             Login
         </Link>
-        </div>
-        
-          {/* <div className="register-nav" style={{ marginTop: "10px", marginRight: "30px" }} onClick={handleLogout}>Log out</div> */}
-
+        </div>) : (
+          <div className="register-nav" 
+          style={{ marginTop: "10px", marginRight: "30px" }}
+          onClick={handleLogOut}>Log out</div>
+ )}
       </nav>
     </div>
   );
